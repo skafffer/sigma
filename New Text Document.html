@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>isaac | boy.rip</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+
+body{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+background:#050505;
+color:white;
+overflow-x:hidden
+}
+
+#particles{
+position:fixed;
+width:100%;
+height:100%;
+z-index:0
+}
+
+.header{
+margin-top:80px;
+text-align:center;
+z-index:2
+}
+
+.name{
+font-size:56px;
+font-weight:600;
+text-shadow:0 0 10px #8b5cf6,0 0 30px #8b5cf6,0 0 60px #8b5cf6
+}
+
+.domain{
+opacity:.6;
+margin-top:6px
+}
+
+.title{
+margin-top:14px;
+font-size:18px;
+color:#b78cff;
+letter-spacing:1px;
+text-shadow:0 0 10px #8b5cf6,0 0 20px #8b5cf6
+}
+
+.cursor{
+display:inline-block;
+width:2px;
+height:18px;
+background:#b78cff;
+margin-left:4px;
+animation:blink 1s infinite
+}
+
+@keyframes blink{
+0%,100%{opacity:1}
+50%{opacity:0}
+}
+
+.section{
+margin-top:70px;
+width:90%;
+max-width:720px;
+z-index:2;
+display:flex;
+flex-direction:column;
+align-items:center
+}
+
+.section-title{
+font-size:20px;
+margin-bottom:18px;
+opacity:.9;
+text-align:center;
+width:100%;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,70px);
+gap:24px;
+justify-content:center;
+}
+
+.square{
+width:70px;
+height:70px;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+border-radius:14px;
+background:rgba(255,255,255,0.03);
+transition:.25s;
+backdrop-filter:blur(8px)
+}
+
+.square:hover{
+transform:scale(1.18);
+background:rgba(139,92,246,0.15);
+box-shadow:0 0 15px #8b5cf6,0 0 40px #8b5cf6
+}
+
+.icon{
+width:36px;
+height:36px;
+filter:invert(1)
+}
+
+.minecraft{
+width:40px;
+height:40px;
+image-rendering:pixelated
+}
+
+/* MOBILE */
+
+@media (max-width:600px){
+
+.header{margin-top:60px}
+
+.name{font-size:42px}
+
+.title{font-size:16px}
+
+.section{margin-top:50px}
+
+.grid{
+grid-template-columns:repeat(3,64px);
+gap:20px
+}
+
+.square{
+width:64px;
+height:64px
+}
+
+.icon{
+width:30px;
+height:30px
+}
+
+.minecraft{
+width:34px;
+height:34px
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<div class="header">
+<div class="name">isaac</div>
+<div class="domain">boy.rip</div>
+
+<div class="title">
+<span id="typing"></span><span class="cursor"></span>
+</div>
+</div>
+
+<!-- SOCIALS -->
+
+<div class="section">
+<div class="section-title">Socials</div>
+
+<div class="grid">
+
+<div class="square" onclick="openLink('https://tiktok.com/@isaac.swfl')">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg">
+</div>
+
+<div class="square" onclick="openLink('https://snapchat.com/add/isaac.swfl')">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/snapchat.svg">
+</div>
+
+<div class="square" onclick="openLink('https://open.spotify.com/user/31vx2eq2xcjkc3zzp773sflajdsa?si=pNxfkubtRaG6BR4hlauNIA')">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg">
+</div>
+
+<div class="square" onclick="openLink('https://www.instagram.com/isaac.swfl')">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg">
+</div>
+
+</div>
+</div>
+
+<!-- GAMES -->
+
+<div class="section">
+<div class="section-title">Games</div>
+
+<div class="grid">
+
+<div class="square" onclick="openLink('https://namemc.com/search?q=Gladdest')">
+<img class="minecraft" src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/minecraft.svg">
+</div>
+
+<div class="square" onclick="openLink('https://roblox.com/users/1781441149')">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/roblox.svg">
+</div>
+
+<div class="square" onclick="openLink('https://steamcommunity.com/profiles/76561199698409898')">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/steam.svg">
+</div>
+
+</div>
+</div>
+
+<!-- BUSINESS -->
+
+<div class="section">
+<div class="section-title">Business Inquiries</div>
+
+<div class="grid">
+
+<div class="square" onclick="openLink('mailto:skafffington@gmail.com')">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg">
+</div>
+
+<div class="square" onclick="openLink('https://discord.com/users/skafff')">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg">
+</div>
+
+<div class="square" onclick="openLink('https://t.me/CravingLTC')">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg">
+</div>
+
+</div>
+</div>
+
+<script>
+
+const text="Fullstack Developer";
+let i=0;
+
+function type(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(type,80);
+}
+}
+
+type();
+
+function openLink(url){
+window.open(url,"_blank");
+}
+
+tsParticles.load("particles",{
+particles:{
+number:{value:80},
+color:{value:"#8b5cf6"},
+links:{
+enable:true,
+distance:140,
+color:"#8b5cf6",
+opacity:0.25
+},
+move:{enable:true,speed:1},
+opacity:{value:0.5},
+size:{value:2}
+},
+background:{color:"transparent"}
+});
+
+</script>
+
+</body>
+</html>
